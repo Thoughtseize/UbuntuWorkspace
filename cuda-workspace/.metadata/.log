@@ -1,0 +1,91 @@
+!SESSION 2014-04-22 00:56:04.553 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-22 00:56:14.145
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-04-22 01:03:00.804 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-22 01:03:06.271
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-22 01:05:50.849
+!MESSAGE Indexed 'test' (4 sources, 224 headers) in 92.61 sec: 39,280 declarations; 101,877 references; 0 unresolved inclusions; 0 syntax errors; 239 unresolved names (0.17%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-22 01:34:42.352
+!MESSAGE Indexed 'vectorAdd' (1 sources, 38 headers) in 0.28 sec: 1,210 declarations; 1,937 references; 0 unresolved inclusions; 0 syntax errors; 37 unresolved names (1.16%)
+!SESSION 2014-04-22 07:57:51.116 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-04-22 07:58:02.677
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-22 07:58:05.103
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-22 07:59:05.359
+!MESSAGE Indexed 'MatrixMult' (0 sources, 0 headers) in 0.00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-22 08:00:05.570
+!MESSAGE Indexed 'MatrixMult' (1 sources, 38 headers) in 1.15 sec: 1,210 declarations; 1,937 references; 0 unresolved inclusions; 0 syntax errors; 37 unresolved names (1.16%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-04-22 09:20:32.521
+!MESSAGE Indexed 'PrefixSum' (1 sources, 38 headers) in 0.36 sec: 1,210 declarations; 1,937 references; 0 unresolved inclusions; 0 syntax errors; 37 unresolved names (1.16%)
+!SESSION 2014-04-24 08:04:47.180 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-04-24 08:04:48.466
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-04-24 08:04:50.857
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-02-09 19:48:20.131 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-02-09 19:48:25.324
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

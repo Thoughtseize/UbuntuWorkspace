@@ -1,0 +1,19 @@
+08:36:33 **** Incremental Build of configuration Debug for project MatrixMult ****
+make all 
+Building file: ../src/MatrixMult.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/MatrixMult.d" "../src/MatrixMult.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/MatrixMult.o" "../src/MatrixMult.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building: ../src/MatrixMult.cu
+ 
+Building target: MatrixMult
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "MatrixMult"  ./src/MatrixMult.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: MatrixMult
+ 
+
+08:36:34 Build Finished (took 1s.663ms)
+

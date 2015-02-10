@@ -1,0 +1,726 @@
+01:04:38 **** Build of configuration Debug for project test ****
+make all 
+Building file: ../src/histogram256.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -I"/usr/local/cuda-6.0/samples/3_Imaging" -I"/usr/local/cuda-6.0/samples/common/inc" -I"/home/max/cuda-workspace/test" -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/histogram256.d" "../src/histogram256.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -I"/usr/local/cuda-6.0/samples/3_Imaging" -I"/usr/local/cuda-6.0/samples/common/inc" -I"/home/max/cuda-workspace/test" -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/histogram256.o" "../src/histogram256.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building: ../src/histogram256.cu
+ 
+Building file: ../src/histogram64.cu
+Invoking: NVCC Compiler
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc -I"/usr/local/cuda-6.0/samples/3_Imaging" -I"/usr/local/cuda-6.0/samples/common/inc" -I"/home/max/cuda-workspace/test" -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/histogram64.d" "../src/histogram64.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -I"/usr/local/cuda-6.0/samples/3_Imaging" -I"/usr/local/cuda-6.0/samples/common/inc" -I"/home/max/cuda-workspace/test" -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/histogram64.o" "../src/histogram64.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building: ../src/histogram64.cu
+ 
+Building file: ../src/histogram_gold.cpp
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc -I"/usr/local/cuda-6.0/samples/3_Imaging" -I"/usr/local/cuda-6.0/samples/common/inc" -I"/home/max/cuda-workspace/test" -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/histogram_gold.d" "../src/histogram_gold.cpp"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc -I"/usr/local/cuda-6.0/samples/3_Imaging" -I"/usr/local/cuda-6.0/samples/common/inc" -I"/home/max/cuda-workspace/test" -G -g -O0 --compile  -x c++ -o  "src/histogram_gold.o" "../src/histogram_gold.cpp"
+Finished building: ../src/histogram_gold.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -I"/usr/local/cuda-6.0/samples/3_Imaging" -I"/usr/local/cuda-6.0/samples/common/inc" -I"/home/max/cuda-workspace/test" -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/main.d" "../src/main.cpp"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc -I"/usr/local/cuda-6.0/samples/3_Imaging" -I"/usr/local/cuda-6.0/samples/common/inc" -I"/home/max/cuda-workspace/test" -G -g -O0 --compile  -x c++ -o  "src/main.o" "../src/main.cpp"
+../src/main.cpp:28:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ static char *sSDKsample = "[histogram]\0";
+                           ^
+Finished building: ../src/main.cpp
+ 
+Building target: test
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "test"  ./src/histogram256.o ./src/histogram64.o ./src/histogram_gold.o ./src/main.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: test
+ 
+01:04:48 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+01:45:59 **** Build of configuration Debug for project vectorAdd ****
+make all 
+Building file: ../src/vectorAdd.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/vectorAdd.d" "../src/vectorAdd.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/vectorAdd.o" "../src/vectorAdd.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/vectorAdd.cu(5): error: unrecognized token
+
+../src/vectorAdd.cu(5): error: expected a declaration
+
+../src/vectorAdd.cu(5): error: unrecognized token
+
+../src/vectorAdd.cu(42): warning: parsing restarts here after previous syntax error
+
+../src/vectorAdd.cu(43): error: this declaration has no storage class or type specifier
+
+../src/vectorAdd.cu(43): error: declaration is incompatible with "cudaError_t cudaFree(void *)"
+/usr/local/cuda-6.0/bin/..//include/cuda_runtime_api.h(2840): here
+
+../src/vectorAdd.cu(43): error: identifier "dev_b" is undefined
+
+../src/vectorAdd.cu(44): error: this declaration has no storage class or type specifier
+
+../src/vectorAdd.cu(44): error: variable "cudaFree" has already been defined
+
+../src/vectorAdd.cu(44): error: identifier "dev_c" is undefined
+
+../src/vectorAdd.cu(46): error: expected a declaration
+
+../src/vectorAdd.cu(47): error: expected a declaration
+
+11 errors detected in the compilation of "/tmp/tmpxft_000016c9_00000000-6_vectorAdd.cpp1.ii".
+make: *** [src/vectorAdd.o] Error 2
+01:46:33 **** Incremental Build of configuration Debug for project vectorAdd ****
+make all 
+Building file: ../src/vectorAdd.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/vectorAdd.d" "../src/vectorAdd.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/vectorAdd.o" "../src/vectorAdd.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/vectorAdd.cu(5): error: unrecognized token
+
+../src/vectorAdd.cu(5): error: expected a declaration
+
+../src/vectorAdd.cu(5): error: unrecognized token
+
+../src/vectorAdd.cu(42): warning: parsing restarts here after previous syntax error
+
+../src/vectorAdd.cu(43): error: this declaration has no storage class or type specifier
+
+../src/vectorAdd.cu(43): error: declaration is incompatible with "cudaError_t cudaFree(void *)"
+/usr/local/cuda-6.0/bin/..//include/cuda_runtime_api.h(2840): here
+
+../src/vectorAdd.cu(43): error: identifier "dev_b" is undefined
+
+../src/vectorAdd.cu(44): error: this declaration has no storage class or type specifier
+
+../src/vectorAdd.cu(44): error: variable "cudaFree" has already been defined
+
+../src/vectorAdd.cu(44): error: identifier "dev_c" is undefined
+
+../src/vectorAdd.cu(46): error: expected a declaration
+
+../src/vectorAdd.cu(47): error: expected a declaration
+
+11 errors detected in the compilation of "/tmp/tmpxft_0000171f_00000000-6_vectorAdd.cpp1.ii".
+make: *** [src/vectorAdd.o] Error 2
+01:47:41 **** Incremental Build of configuration Debug for project vectorAdd ****
+make all 
+Building file: ../src/vectorAdd.cu
+Invoking: NVCC Compiler
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/vectorAdd.d" "../src/vectorAdd.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/vectorAdd.o" "../src/vectorAdd.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building: ../src/vectorAdd.cu
+ 
+Building target: vectorAdd
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "vectorAdd"  ./src/vectorAdd.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: vectorAdd
+ 
+01:47:58 **** Incremental Build of configuration Debug for project vectorAdd ****
+make all 
+make: Nothing to be done for `all'.
+08:24:58 **** Build of configuration Debug for project MatrixMult ****
+make all 
+Building file: ../src/MatrixMult.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/MatrixMult.d" "../src/MatrixMult.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/MatrixMult.o" "../src/MatrixMult.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building: ../src/MatrixMult.cu
+ 
+Building target: MatrixMult
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "MatrixMult"  ./src/MatrixMult.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: MatrixMult
+ 
+08:36:33 **** Incremental Build of configuration Debug for project MatrixMult ****
+make all 
+Building file: ../src/MatrixMult.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/MatrixMult.d" "../src/MatrixMult.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/MatrixMult.o" "../src/MatrixMult.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building: ../src/MatrixMult.cu
+ 
+Building target: MatrixMult
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "MatrixMult"  ./src/MatrixMult.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: MatrixMult
+ 
+02:27:04 **** Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(8): error: expected a ";"
+
+../src/PrefixSum.cu(10): error: identifier "i" is undefined
+
+../src/PrefixSum.cu(10): error: identifier "n" is undefined
+
+../src/PrefixSum.cu(82): error: identifier "b" is undefined
+
+../src/PrefixSum.cu(83): error: identifier "c" is undefined
+
+../src/PrefixSum.cu(120): error: identifier "deviceC" is undefined
+
+../src/PrefixSum.cu(128): error: identifier "matrixMult" is undefined
+
+../src/PrefixSum.cu(67): warning: variable "deviceA" was set but never used
+
+7 errors detected in the compilation of "/tmp/tmpxft_0000248b_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+02:27:18 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(10): error: identifier "n" is undefined
+
+../src/PrefixSum.cu(82): error: identifier "b" is undefined
+
+../src/PrefixSum.cu(83): error: identifier "c" is undefined
+
+../src/PrefixSum.cu(120): error: identifier "deviceC" is undefined
+
+../src/PrefixSum.cu(128): error: identifier "matrixMult" is undefined
+
+../src/PrefixSum.cu(67): warning: variable "deviceA" was set but never used
+
+5 errors detected in the compilation of "/tmp/tmpxft_000024e2_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+02:27:28 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(82): error: identifier "b" is undefined
+
+../src/PrefixSum.cu(83): error: identifier "c" is undefined
+
+../src/PrefixSum.cu(120): error: identifier "deviceC" is undefined
+
+../src/PrefixSum.cu(128): error: identifier "matrixMult" is undefined
+
+../src/PrefixSum.cu(67): warning: variable "deviceA" was set but never used
+
+4 errors detected in the compilation of "/tmp/tmpxft_00002537_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:35:51 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(13): error: expression must have integral or enum type
+
+../src/PrefixSum.cu(122): error: identifier "dev_c" is undefined
+
+../src/PrefixSum.cu(136): error: identifier "ssd" is undefined
+
+../src/PrefixSum.cu(138): error: identifier "end" is undefined
+
+../src/PrefixSum.cu(138): error: identifier "begin" is undefined
+
+../src/PrefixSum.cu(139): error: identifier "elapsedTime" is undefined
+
+../src/PrefixSum.cu(141): error: identifier "start" is undefined
+
+../src/PrefixSum.cu(142): error: identifier "stop" is undefined
+
+../src/PrefixSum.cu(144): error: identifier "a" is undefined
+
+../src/PrefixSum.cu(145): error: identifier "b" is undefined
+
+../src/PrefixSum.cu(146): error: identifier "c" is undefined
+
+../src/PrefixSum.cu(147): error: identifier "deviceC" is undefined
+
+../src/PrefixSum.cu(148): error: identifier "dev_a" is undefined
+
+../src/PrefixSum.cu(149): error: identifier "dev_b" is undefined
+
+../src/PrefixSum.cu(150): error: identifier "dev_c" is undefined
+
+../src/PrefixSum.cu(156): error: expected a declaration
+
+../src/PrefixSum.cu(157): error: expected a declaration
+
+17 errors detected in the compilation of "/tmp/tmpxft_00002b56_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:36:12 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(13): error: expression must have integral or enum type
+
+../src/PrefixSum.cu(122): error: identifier "dev_c" is undefined
+
+../src/PrefixSum.cu(143): error: identifier "b" is undefined
+
+../src/PrefixSum.cu(144): error: identifier "c" is undefined
+
+../src/PrefixSum.cu(145): error: identifier "deviceC" is undefined
+
+../src/PrefixSum.cu(147): error: identifier "dev_b" is undefined
+
+6 errors detected in the compilation of "/tmp/tmpxft_00002bb3_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:36:40 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(13): error: expression must have integral or enum type
+
+../src/PrefixSum.cu(122): error: identifier "dev_c" is undefined
+
+2 errors detected in the compilation of "/tmp/tmpxft_00002c12_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:36:48 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(13): error: expression must have integral or enum type
+
+1 error detected in the compilation of "/tmp/tmpxft_00002c68_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:37:22 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(11): error: calling a __host__ function("std::log<int> ") from a __global__ function("prefixSum") is not allowed
+
+../src/PrefixSum.cu(11): error: calling a __host__ function("std::log<int> ") from a __global__ function("prefixSum") is not allowed
+
+../src/PrefixSum.cu(12): error: calling a __host__ function("std::pow<int, int> ") from a __global__ function("prefixSum") is not allowed
+
+../src/PrefixSum.cu(13): error: calling a __host__ function("std::pow<int, int> ") from a __global__ function("prefixSum") is not allowed
+
+4 errors detected in the compilation of "/tmp/tmpxft_00002cc9_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:38:10 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(12): error: calling a __host__ function("std::pow<int, int> ") from a __global__ function("prefixSum") is not allowed
+
+../src/PrefixSum.cu(13): error: calling a __host__ function("std::pow<int, int> ") from a __global__ function("prefixSum") is not allowed
+
+2 errors detected in the compilation of "/tmp/tmpxft_00002d2c_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:39:13 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(12): error: no instance of overloaded function "exp" matches the argument list
+            argument types are: (int, int)
+
+../src/PrefixSum.cu(13): error: no instance of overloaded function "exp" matches the argument list
+            argument types are: (int, int)
+
+2 errors detected in the compilation of "/tmp/tmpxft_00002d94_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:39:57 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(11): error: no instance of overloaded function "exp" matches the argument list
+            argument types are: (int, int)
+
+../src/PrefixSum.cu(12): error: no instance of overloaded function "exp" matches the argument list
+            argument types are: (int, int)
+
+2 errors detected in the compilation of "/tmp/tmpxft_00002dec_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:40:08 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(11): error: calling a __host__ function("std::pow<int, int> ") from a __global__ function("prefixSum") is not allowed
+
+../src/PrefixSum.cu(12): error: calling a __host__ function("std::pow<int, int> ") from a __global__ function("prefixSum") is not allowed
+
+2 errors detected in the compilation of "/tmp/tmpxft_00002e44_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:42:45 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+03:50:46 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(14): error: identifier "__syncThreads" is undefined
+
+1 error detected in the compilation of "/tmp/tmpxft_000032e6_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+03:51:13 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+03:51:20 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+make: Nothing to be done for `all'.
+04:05:13 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+04:05:17 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+make: Nothing to be done for `all'.
+08:31:07 **** Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(9): error: expression must have a constant value
+
+1 error detected in the compilation of "/tmp/tmpxft_00000c3f_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+08:31:23 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(9): error: expression must have a constant value
+
+1 error detected in the compilation of "/tmp/tmpxft_00000c92_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+08:31:42 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(9): error: expression must have a constant value
+
+1 error detected in the compilation of "/tmp/tmpxft_00000ce3_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+08:31:45 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_00000d34_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+08:31:52 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(9): error: expression must have a constant value
+
+1 error detected in the compilation of "/tmp/tmpxft_00000dc0_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+08:31:57 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_00000e11_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+08:39:55 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_000029f2_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+08:40:58 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+make: Nothing to be done for `all'.
+08:50:00 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_00002bae_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+08:50:53 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_00002c44_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+08:57:11 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_00002d19_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+08:59:49 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(14): error: calling a __host__ function("std::pow<int, int> ") from a __global__ function("prefixSum") is not allowed
+
+../src/PrefixSum.cu(14): error: calling a __host__ function("std::pow<int, int> ") from a __global__ function("prefixSum") is not allowed
+
+../src/PrefixSum.cu(15): error: calling a __host__ function("std::pow<int, int> ") from a __global__ function("prefixSum") is not allowed
+
+3 errors detected in the compilation of "/tmp/tmpxft_00002dbf_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+09:02:22 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_00002e3a_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+09:05:27 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(90): error: argument of type "int" is incompatible with parameter of type "time_t *"
+
+1 error detected in the compilation of "/tmp/tmpxft_00002f16_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+09:05:47 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_00002f6d_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+09:05:52 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+make: Nothing to be done for `all'.
+09:06:30 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+make: Nothing to be done for `all'.
+09:06:33 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+make: Nothing to be done for `all'.
+09:14:57 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+../src/PrefixSum.cu(74): error: "deviceA" has already been declared in the current scope
+
+../src/PrefixSum.cu(74): warning: variable "deviceA" was declared but never referenced
+
+1 error detected in the compilation of "/tmp/tmpxft_0000318d_00000000-6_PrefixSum.cpp1.ii".
+make: *** [src/PrefixSum.o] Error 2
+09:15:11 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_000031e0_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 

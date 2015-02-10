@@ -1,0 +1,20 @@
+09:15:11 **** Incremental Build of configuration Debug for project PrefixSum ****
+make all 
+Building file: ../src/PrefixSum.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-6.0/bin/nvcc -G -g -O0 -gencode arch=compute_10,code=sm_10  -odir "src" -M -o "src/PrefixSum.d" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+/usr/local/cuda-6.0/bin/nvcc --compile -G -O0 -g -gencode arch=compute_10,code=compute_10 -gencode arch=compute_10,code=sm_10  -x cu -o  "src/PrefixSum.o" "../src/PrefixSum.cu"
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_000031e0_00000000-5_PrefixSum.ptx, line 98; warning : Double is not supported. Demoting to float
+Finished building: ../src/PrefixSum.cu
+ 
+Building target: PrefixSum
+Invoking: NVCC Linker
+/usr/local/cuda-6.0/bin/nvcc --cudart static -link -o  "PrefixSum"  ./src/PrefixSum.o   
+nvcc warning : The 'compute_10' and 'sm_10' architectures are deprecated, and may be removed in a future release.
+Finished building target: PrefixSum
+ 
+
+09:15:13 Build Finished (took 1s.814ms)
+
