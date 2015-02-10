@@ -1,0 +1,182 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/time.h>
+
+#include <X11/Xlib.h> // X11 library headers
+#include <X11/Xutil.h>
+#include <X11/Xos.h>
+
+#define X_RESN 800 /* x resolution */
+#define Y_RESN 800 /* y resolution */
+
+#define N 1000
+#define T 5000
+
+int main(int argc, char *argv[]) {
+
+	Window win; /* initialization for a window */
+	 unsigned int width, height, /* window size */
+	 win_x,win_y, /* window position */ 
+	 
+	 border_width, /* border width in pixels */
+	 display_width, display_height, /* size of screen */
+	 screen; /* which screen */
+
+	 char *window_name = "My graphics program", *display_name = NULL;
+	 GC gc;
+	 unsigned long valuemask = 0;
+	 XGCValues values;
+	 Display *display;
+	 XSizeHints size_hints;
+	 Pixmap bitmap;
+	 XPoint points[800];
+	 FILE *fp, *fopen ();
+	 char str[100];
+
+	 XSetWindowAttributes attr[1];
+
+	 if ( (display = XOpenDisplay (display_name)) == NULL ) { /* connect to Xserver */
+	 fprintf (stderr, "Cannot connect to X server %s\n",XDisplayName (display_name) );
+	 exit (-1);
+	 }
+
+	 screen = DefaultScreen (display); /* get screen size */
+	 display_width = DisplayWidth (display, screen);
+	 display_height = DisplayHeight (display, screen);
+
+	 width = X_RESN; /* set window size */
+	 height = Y_RESN;
+	 win_x = 0; win_y = 0; /* set window position */
+
+	 border_width = 4; /* create opaque window */
+	 win = XCreateSimpleWindow (display, RootWindow (display, screen),
+	 win_x, win_y, width, height, border_width,
+	 BlackPixel (display, screen), WhitePixel (display, screen));
+
+	 size_hints.flags = USPosition|USSize;
+	 size_hints.x = win_x;
+	 size_hints.y = win_y;
+	 size_hints.width = width;
+	 size_hints.height = height;
+	 size_hints.min_width = 300;
+	 size_hints.min_height = 300;
+
+	 XSetNormalHints (display, win, &size_hints);
+	 XStoreName(display, win, window_name);
+
+	 gc = XCreateGC (display, win, valuemask, &values); /* create graphics context */
+
+	 XSetBackground (display, gc, WhitePixel (display, screen));
+	 XSetForeground (display, gc, BlackPixel (display, screen));
+	 XSetLineAttributes (display, gc, 1, LineSolid, CapRound, JoinRound);
+
+	 attr[0].backing_store = Always;
+	 attr[0].backing_planes = 1;
+	 attr[0].backing_pixel = BlackPixel(display, screen);
+
+	 XChangeWindowAttributes(display, win, CWBackingStore | CWBackingPlanes | CWBackingPixel, attr);
+
+	 XMapWindow (display, win);
+	 XSync(display, 0);
+	int iteration, i, j;
+
+	//static so it can use the global memory space in order
+	//to avoid segfaults
+	static double g[N][N][2];
+
+	int x = 0;
+	double elapsed_time;
+	struct timeval tv1, tv2;
+
+//initialize matrices (assuming that room temperature is 20, the same as the walls
+	for (i = 0; i < N; i++) {
+		for (j = 0; j < N; j++) {
+			g[i][j][0] = 20;
+			g[i][j][1] = 20;
+		}
+	}
+
+//initialize "fireplace" to 100C
+	for (i = 300; i < 700; i++) {
+		g[0][i][0] = 100;
+		g[0][i][1] = 100;
+	}
+
+	gettimeofday(&tv1, NULL);
+
+//do Jacobi iterations
+	for (iteration = 0; iteration < T; iteration++) {
+		for (i = 1; i < N - 1; i++) {
+			for (j = 1; j < N - 1; j++) {
+				if (x == 0) {
+					g[i][j][0] = 0.25
+							* (g[i - 1][j][1] + g[i + 1][j][1] + g[i][j - 1][1]
+									+ g[i][j + 1][1]);
+					x = 1;
+				} else {
+					g[i][j][1] = 0.25
+							* (g[i - 1][j][0] + g[i + 1][j][0] + g[i][j - 1][0]
+									+ g[i][j + 1][0]);
+					x = 0;
+				}
+			}
+		}
+	}
+	gettimeofday(&tv2, NULL);
+	elapsed_time = (tv2.tv_sec - tv1.tv_sec)
+				+ ((tv2.tv_usec - tv1.tv_usec) / 1000000.0);
+		printf("elapsed_time=\t%lf (seconds)\n", elapsed_time);
+	for (i = 0; i < N - 8; i += 8) {
+		for (j = 0; j < N - 8; j += 8) {
+			printf("%f ", g[i][j][1]);
+		}
+		printf("\n");
+	}
+
+	XClearWindow(display, win);
+		for (i = 0; i < N; i++) {
+			for (j = 0; j < N; j++) {
+				if(g[i][j][1] <= 20)
+				{
+					XSetForeground(display,gc,(long) 0x191970); //midnight blue
+				}
+				else if(g[i][j][1] <= 30)
+				{
+					XSetForeground(display,gc,(long) 0x0000CD); //medium blue
+				}
+				else if(g[i][j][1] <= 40)
+				{
+					XSetForeground(display,gc,(long) 0x1E90FF); //dodger blue
+				}
+				else if(g[i][j][1] <= 50)
+				{
+					XSetForeground(display,gc,(long) 0x9400D3); //dark violet
+				}
+				else if(g[i][j][1] <= 60)
+				{
+					XSetForeground(display,gc,(long) 0xFF1493); //deep pink
+				}
+				else if(g[i][j][1] <= 70)
+				{
+					XSetForeground(display,gc,(long) 0xDC143C); //crimson
+				}
+				else if(g[i][j][1] <= 80)
+				{
+					XSetForeground(display,gc,(long) 0xFF0000); //red
+				}
+				else if(g[i][j][1] <= 90)
+				{
+					XSetForeground(display,gc,(long) 0xFFA500); //orange
+				}
+				else
+				{
+					XSetForeground(display,gc,(long) 0xFFFF00); //yellow
+				}
+				XDrawPoint(display, win, gc, i, j);
+			}
+			usleep(100000);
+		}
+	XFlush(display);
+
+	return 0;
+}

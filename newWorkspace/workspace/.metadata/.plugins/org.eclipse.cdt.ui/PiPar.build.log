@@ -1,0 +1,15 @@
+19:46:50 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+Building file: ../src/PiPar.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/mpich2/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiPar.d" -MT"src/PiPar.d" -o "src/PiPar.o" "../src/PiPar.c"
+Finished building: ../src/PiPar.c
+ 
+Building target: PiPar
+Invoking: GCC C Linker
+mpicc -Lusr/lib/mpich2/lib -o "PiPar"  ./src/PiPar.o   
+Finished building target: PiPar
+ 
+
+19:46:51 Build Finished (took 214ms)
+

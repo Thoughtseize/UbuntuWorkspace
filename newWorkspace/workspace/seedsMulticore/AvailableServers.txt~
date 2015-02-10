@@ -1,0 +1,9 @@
+#This file should have the following information for each server
+#hostname middleware(ssh, globus) gsiftp_port(2811,-) globusgram(8440,-) scheduler(fork,condor) cpus_on_cluster cores_on_cpu grid_name
+#coit-grid01.uncc.edu globus 2811 8440 fork 1 4 GridOne
+#coit-grid02.uncc.edu globus 2811 8440 fork 1 4 GridOne
+#coit-grid03.uncc.edu globus 2811 8440 fork 1 4 GridOne
+#coit-grid04.uncc.edu globus 2811 8440 fork 1 4 GridOne
+Kronos local - - - 1 11 GridTwo
+#192.168.0.107 ssh - - fork 1 1 GridTwo
+#192.168.0.16 ssh - - fork 1 5 GridTwo

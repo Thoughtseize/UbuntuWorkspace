@@ -1,0 +1,6 @@
+02:21:45 **** Incremental Build of configuration Debug for project omp_worksharing_for ****
+make all 
+make: Nothing to be done for `all'.
+
+02:21:45 Build Finished (took 64ms)
+

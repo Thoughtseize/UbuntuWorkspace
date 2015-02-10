@@ -1,0 +1,33 @@
+02:19:40 **** Incremental Build of configuration Debug for project omp_heat ****
+make all 
+Building target: omp_heat
+Invoking: GCC C Linker
+gcc -fopenmp  -o "omp_heat"  ./src/omp_heat.o   
+./src/omp_heat.o: In function `main':
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:37: undefined reference to `XOpenDisplay'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:38: undefined reference to `XDisplayName'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:53: undefined reference to `XCreateSimpleWindow'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:65: undefined reference to `XSetNormalHints'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:66: undefined reference to `XStoreName'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:68: undefined reference to `XCreateGC'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:70: undefined reference to `XSetBackground'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:71: undefined reference to `XSetForeground'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:72: undefined reference to `XSetLineAttributes'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:78: undefined reference to `XChangeWindowAttributes'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:81: undefined reference to `XMapWindow'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:82: undefined reference to `XSync'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:196: undefined reference to `XClearWindow'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:201: undefined reference to `XSetForeground'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:205: undefined reference to `XSetForeground'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:209: undefined reference to `XSetForeground'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:213: undefined reference to `XSetForeground'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:217: undefined reference to `XSetForeground'
+./src/omp_heat.o:/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:221: more undefined references to `XSetForeground' follow
+./src/omp_heat.o: In function `main':
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:235: undefined reference to `XDrawPoint'
+/home/max/newWorkspace/omp_heat/Debug/../src/omp_heat.c:240: undefined reference to `XFlush'
+collect2: error: ld returned 1 exit status
+make: *** [omp_heat] Error 1
+
+02:19:40 Build Finished (took 164ms)
+

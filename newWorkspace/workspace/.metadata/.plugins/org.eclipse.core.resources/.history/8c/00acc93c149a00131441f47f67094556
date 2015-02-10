@@ -1,0 +1,36 @@
+/*
+ ============================================================================
+ Name        : PiSeq.c
+ Author      : Max Goldstein
+ Version     :
+ Copyright   : 2014
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+	int i, inside = 0;
+	double x, y, dist, pi;
+	//initialize random seed
+	srand(time(NULL));
+
+	for(i = 0; i < 10000; i++){
+		x = (double) rand() / RAND_MAX;
+		y = (double) rand() / RAND_MAX;
+
+		dist = x * x + y * y;
+		printf("%f ", dist);
+		if(dist <= 1){
+			++inside;
+		}
+	}
+
+	pi = (inside/10000) * 4;
+
+
+	return 0;
+}

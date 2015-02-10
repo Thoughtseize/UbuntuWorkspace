@@ -1,0 +1,11 @@
+05:55:30 **** Incremental Build of configuration Debug for project qwerty ****
+make all 
+Building target: qwerty
+Invoking: GCC C Linker
+mpicc -L/usr/lib/ -o "qwerty"  ./src/qwerty.o   -lmpich2
+/usr/bin/ld: cannot find -lmpich2
+collect2: error: ld returned 1 exit status
+make: *** [qwerty] Error 1
+
+05:55:30 Build Finished (took 65ms)
+

@@ -1,0 +1,13 @@
+11:18:34 **** Build of configuration Debug for project hello ****
+make all 
+Building file: ../src/hello.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/openmpi/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/hello.d" -MT"src/hello.d" -o "src/hello.o" "../src/hello.c"
+../src/hello.c:1:20: fatal error: suzaku.h: No such file or directory
+ #include "suzaku.h"
+                    ^
+compilation terminated.
+make: *** [src/hello.o] Error 1
+
+11:18:34 Build Finished (took 173ms)
+

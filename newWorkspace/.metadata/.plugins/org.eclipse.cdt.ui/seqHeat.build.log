@@ -1,0 +1,33 @@
+02:19:41 **** Incremental Build of configuration Debug for project seqHeat ****
+make all 
+Building target: seqHeat
+Invoking: GCC C Linker
+gcc  -o "seqHeat"  ./src/seqHeat.o   
+./src/seqHeat.o: In function `main':
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:37: undefined reference to `XOpenDisplay'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:38: undefined reference to `XDisplayName'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:51: undefined reference to `XCreateSimpleWindow'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:63: undefined reference to `XSetNormalHints'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:64: undefined reference to `XStoreName'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:66: undefined reference to `XCreateGC'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:68: undefined reference to `XSetBackground'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:69: undefined reference to `XSetForeground'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:70: undefined reference to `XSetLineAttributes'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:76: undefined reference to `XChangeWindowAttributes'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:78: undefined reference to `XMapWindow'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:79: undefined reference to `XSync'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:135: undefined reference to `XClearWindow'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:140: undefined reference to `XSetForeground'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:144: undefined reference to `XSetForeground'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:148: undefined reference to `XSetForeground'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:152: undefined reference to `XSetForeground'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:156: undefined reference to `XSetForeground'
+./src/seqHeat.o:/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:160: more undefined references to `XSetForeground' follow
+./src/seqHeat.o: In function `main':
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:174: undefined reference to `XDrawPoint'
+/home/max/newWorkspace/seqHeat/Debug/../src/seqHeat.c:179: undefined reference to `XFlush'
+collect2: error: ld returned 1 exit status
+make: *** [seqHeat] Error 1
+
+02:19:41 Build Finished (took 218ms)
+

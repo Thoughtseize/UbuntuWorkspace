@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/time.h>
+
+#define N 1000
+#define T 5000
+
+int main(int argc, char *argv[]) {
+	int iteration, i, j;
+
+	//static so it can use the global memory space in order
+	//to avoid segfaults
+	static double g[N][N][2];
+
+	int x = 0;
+	double elapsed_time;
+	struct timeval tv1, tv2;
+
+//initialize matrices (assuming that room temperature is 20, the same as the walls
+	for (i = 0; i < N; i++) {
+		for (j = 0; j < N; j++) {
+			g[i][j][0] = 20;
+			g[i][j][1] = 20;
+		}
+	}
+
+//initialize "fireplace" to 100C
+	for (i = 300; i < 700; i++) {
+		g[0][i][0] = 100;
+		g[0][i][1] = 100;
+	}
+
+	gettimeofday(&tv1, NULL);
+
+//do Jacobi iterations
+	for (iteration = 0; iteration < T; iteration++) {
+		for (i = 1; i < N - 1; i++) {
+			for (j = 1; j < N - 1; j++) {
+				if (x == 0) {
+					g[i][j][0] = 0.25
+							* (g[i - 1][j][1] + g[i + 1][j][1] + g[i][j - 1][1]
+									+ g[i][j + 1][1]);
+					x = 1;
+				} else {
+					g[i][j][1] = 0.25
+							* (g[i - 1][j][0] + g[i + 1][j][0] + g[i][j - 1][0]
+									+ g[i][j + 1][0]);
+					x = 0;
+				}
+			}
+		}
+	}
+	gettimeofday(&tv2, NULL);
+	elapsed_time = (tv2.tv_sec - tv1.tv_sec)
+				+ ((tv2.tv_usec - tv1.tv_usec) / 1000000.0);
+		printf("elapsed_time=\t%lf (seconds)\n", elapsed_time);
+	for (i = 0; i < N - 8; i += 8) {
+		for (j = 0; j < N - 8; j += 8) {
+			printf("%f ", g[i][j][1]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}

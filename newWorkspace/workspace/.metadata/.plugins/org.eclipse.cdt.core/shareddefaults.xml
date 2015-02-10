@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SharedRoot><SharedProperty id="message" value="!!!Hello World!!!"/><SharedProperty id="author" value="Max Goldstein"/><SharedProperty id="sourceDir" value="src"/><SharedProperty id="copyright" value="2014"/><SharedProperty id="mpi.hello.message" value="Hello MPI World"/></SharedRoot>

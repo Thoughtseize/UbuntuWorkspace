@@ -1,0 +1,125 @@
+#include "suzaku.h"
+#define BLKSIZE 4
+
+void compute(double a[N][N], double b[N][N], double c[N][N], int index,
+		int blksize) {
+	for (int i = index; i < (index + blksize); i++) {
+		for (int j = 0; j < N; j++) {
+			c[i][j] = 0;
+			for (int k = 0; k < N; k++) {
+				c[i][j] = c[i][j] + a[i][k] * b[j][k];
+			}
+		}
+	}
+}
+
+void newWorkerProcess(double a[N][N], double b[N][N], double c[N][N], int rank,
+		int blksize) {
+	if (rank != 0) {
+
+		int index = 0;
+		while (index < N) {
+
+			MPI_Recv(&index, 1, MPI_INT, 0, rank, MPI_COMM_WORLD, &status);
+
+			if (index < N) {
+				compute(a, b, c, index, blksize);
+
+				MPI_Send(&c[index], N * blksize, MPI_DOUBLE, 0, index,
+						MPI_COMM_WORLD);
+			}
+		}
+
+	}
+}
+
+void newMasterProcess(double a[N][N], double c[N][N], int p, int rank,
+		int blksize) {
+	if (rank == 0) {
+
+		int index = 0;
+		double cBuf[blksize][N];
+
+		for (int i = 1; i < p; i++) {
+
+			MPI_Send(&index, 1, MPI_INT, i, i, MPI_COMM_WORLD);
+			//MPI_Send(&a[index], N * blksize, MPI_DOUBLE, i, i, MPI_COMM_WORLD);
+
+			index += blksize;
+		}
+
+		while (index < N) {
+			MPI_Recv(&cBuf, (N * blksize), MPI_DOUBLE, MPI_ANY_SOURCE,
+					MPI_ANY_TAG, MPI_COMM_WORLD, &status);
+
+			for (int i = status.MPI_TAG; i < (status.MPI_TAG + blksize); i++) {
+				for (int j = 0; j < N; j++) {
+					c[i][j] = cBuf[i - status.MPI_TAG][j];
+
+				}
+			}
+			index += blksize;
+
+			MPI_Send(&index, 1, MPI_INT, status.MPI_SOURCE, status.MPI_SOURCE,
+					MPI_COMM_WORLD);
+
+		}
+
+		//send termination signal
+		index = 2 * N;
+		for (int i = 1; i < p; i++) {
+			MPI_Send(&index, 1, MPI_INT, status.MPI_SOURCE, status.MPI_SOURCE,
+					MPI_COMM_WORLD);
+		}
+	}
+}
+
+int main(int argc, char *argv[]) {
+	int i, j, k, error = 0;
+	int p, rank = 0;
+	double a[N][N], b[N][N], c[N][N], bT[N][N];
+	double sum;
+
+	MPI_START(&p, &rank, &argc, &argv);
+	readInputFile(argc, argv, &error, a, b);
+	startTimer(rank);
+
+	if (p == 1) {
+		if (rank == 0) {
+			for (i = 0; i < N; i++) {
+				for (j = 0; j < N; j++) {
+					c[i][j] = 0;
+					for (k = 0; k < N; k++) {
+						c[i][j] = c[i][j] + a[i][k] * b[k][j];
+					}
+				}
+			}
+		}
+	} else {
+//Transpose B and send out the b array to the workers
+		if (rank == 0) {
+			for (i = 0; i < N; i++) {
+				for (j = 0; j < N; j++) {
+					bT[i][j] = 0;
+					bT[i][j] = b[j][i];
+				}
+			}
+		}
+		MPI_Barrier(MPI_COMM_WORLD);
+		MPI_Bcast(bT, (N * N), MPI_DOUBLE, 0, MPI_COMM_WORLD);
+
+		//make sure that all processes have the transposed matrix before starting to compute
+
+//Uses a task queue to issue work and rows from a as workers come
+//back with completed work
+		masterProcess(a, c, p, rank, BLKSIZE);
+//Fetches work and returns the results calculated by the compute
+//function
+		workerProcess(a, bT, c, rank, BLKSIZE);
+	}
+
+	stopTimer(rank);
+	printResults("C =", c, rank);
+
+	return 0;
+}

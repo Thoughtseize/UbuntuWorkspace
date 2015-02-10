@@ -1,0 +1,13 @@
+11:18:34 **** Build of configuration Debug for project matrixmulti ****
+make all 
+Building file: ../src/matrixmulti.c
+Invoking: GCC C Compiler
+mpicc -include/home/max/newWorkspace/Suzaku/suzaku.h -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/matrixmulti.d" -MT"src/matrixmulti.d" -o "src/matrixmulti.o" "../src/matrixmulti.c"
+../src/matrixmulti.c:1:20: fatal error: suzaku.h: No such file or directory
+ #include "suzaku.h"
+                    ^
+compilation terminated.
+make: *** [src/matrixmulti.o] Error 1
+
+11:18:34 Build Finished (took 211ms)
+

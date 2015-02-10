@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ptp.launch.parallelLaunch">
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.2576" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.2651" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.2740" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4474" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4498" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4544" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4569" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4578" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4597" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4721" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4829" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4843" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4856" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4933" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.4949" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5080" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5164" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5388" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5504" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5519" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5731" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5819" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5846" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5914" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.5989" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.6077" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.6090" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.6171" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.6282" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.6442" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.6706" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.6791" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.6899" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.6971" value="RUNNING"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.control.address" value="localhost"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.control.user.name" value="max"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.control.working.dir" value="/home/max"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.current_controller" value="Basic.Options"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.directory" value="/home/max/workspace/PiPar/Debug"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.disabled" value="true"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.enabled_Advanced.Options" value="extraArgs"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.enabled_Basic.Options" value="hostFileOption hostListOption mpiNumberOfProcesses"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.executableDirectory" value="/home/max/workspace/PiPar/Debug"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.executablePath" value="/home/max/workspace/PiPar/Debug/PiPar"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.extraArgs" value=""/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.hostFile" value=""/>
+<booleanAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.hostFileOption" value="false"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.hostList" value=""/>
+<booleanAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.hostListOption" value="false"/>
+<booleanAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.initialized" value="true"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.invalid_Advanced.Options" value="script_path"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.invalid_Basic.Options" value="hostFile hostList script_path"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.launchMode" value="run"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.local_prefix" value=""/>
+<intAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.mpiNumberOfProcesses" value="16"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.progArgs" value=""/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.ptpDirectory" value="/home/max/.eclipsesettings"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.valid_Advanced.Options" value="control.address control.user.name control.working.dir current_controller disabled enabled_Advanced.Options extraArgs hostFile hostFileOption hostList hostListOption invalid_Advanced.Options local_prefix mpiNumberOfProcesses pmpi_minor_version ptpDirectory valid_Advanced.Options visible_Advanced.Options working.directory"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.valid_Basic.Options" value="2576 2651 2740 4544 4569 4597 control.address control.user.name control.working.dir current_controller disabled enabled_Basic.Options executableDirectory executablePath extraArgs hostFileOption hostListOption invalid_Basic.Options launchMode local_prefix mpiNumberOfProcesses pmpi_minor_version progArgs ptpDirectory valid_Basic.Options visible_Basic.Options working.directory"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.visible_Advanced.Options" value="extraArgs"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.visible_Basic.Options" value="hostFile hostFileOption hostList hostListOption mpiNumberOfProcesses"/>
+<stringAttribute key="88c952ff-3dee-3891-b1f3-d301c2a96259.working.directory" value="/home/max"/>
+<booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="true"/>
+<stringAttribute key="org.eclipse.ptp.launch.ARGUMENT_ATTR" value=""/>
+<booleanAttribute key="org.eclipse.ptp.launch.ATTR_AUTO_RUN_COMMAND" value="true"/>
+<booleanAttribute key="org.eclipse.ptp.launch.ATTR_CONSOLE" value="true"/>
+<booleanAttribute key="org.eclipse.ptp.launch.ATTR_COPY_EXECUTABLE_FROM_LOCAL" value="false"/>
+<stringAttribute key="org.eclipse.ptp.launch.ATTR_REMOTE_EXECUTABLE_PATH" value="/home/max/workspace/PiPar/Debug/PiPar"/>
+<booleanAttribute key="org.eclipse.ptp.launch.ATTR_SYNC_AFTER" value="false"/>
+<booleanAttribute key="org.eclipse.ptp.launch.ATTR_SYNC_BEFORE" value="false"/>
+<listAttribute key="org.eclipse.ptp.launch.ATTR_SYNC_RULES"/>
+<stringAttribute key="org.eclipse.ptp.launch.CONFIGURATION_NAME" value="IBM Platform MPI"/>
+<stringAttribute key="org.eclipse.ptp.launch.CONNECTION_NAME" value="Local"/>
+<stringAttribute key="org.eclipse.ptp.launch.PROJECT_ATTR" value="PiPar"/>
+<stringAttribute key="org.eclipse.ptp.launch.REMOTE_SERVICES_ID" value="org.eclipse.ptp.remote.LocalServices"/>
+<stringAttribute key="org.eclipse.ptp.launch.RESOURCE_MANAGER_NAME" value="88c952ff-3dee-3891-b1f3-d301c2a96259"/>
+</launchConfiguration>

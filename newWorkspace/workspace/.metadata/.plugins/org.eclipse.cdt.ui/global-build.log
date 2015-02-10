@@ -1,0 +1,225 @@
+10:23:21 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+make: Nothing to be done for `all'.
+10:24:13 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+make: Nothing to be done for `all'.
+10:24:14 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+make: Nothing to be done for `all'.
+10:24:14 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+10:24:14 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+10:24:41 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+Building file: ../src/PiPar.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/mpich2/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiPar.d" -MT"src/PiPar.d" -o "src/PiPar.o" "../src/PiPar.c"
+Finished building: ../src/PiPar.c
+ 
+Building target: PiPar
+Invoking: GCC C Linker
+mpicc -Lusr/lib/mpich2/lib -o "PiPar"  ./src/PiPar.o   
+Finished building target: PiPar
+ 
+10:24:41 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+make: Nothing to be done for `all'.
+10:24:41 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+10:24:41 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+10:26:21 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+Building file: ../src/PiPar.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/mpich2/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiPar.d" -MT"src/PiPar.d" -o "src/PiPar.o" "../src/PiPar.c"
+Finished building: ../src/PiPar.c
+ 
+Building target: PiPar
+Invoking: GCC C Linker
+mpicc -Lusr/lib/mpich2/lib -o "PiPar"  ./src/PiPar.o   
+Finished building target: PiPar
+ 
+10:26:21 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+make: Nothing to be done for `all'.
+10:26:21 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+10:26:21 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+10:30:40 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+Building file: ../src/PiPar.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/mpich2/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiPar.d" -MT"src/PiPar.d" -o "src/PiPar.o" "../src/PiPar.c"
+Finished building: ../src/PiPar.c
+ 
+Building target: PiPar
+Invoking: GCC C Linker
+mpicc -Lusr/lib/mpich2/lib -o "PiPar"  ./src/PiPar.o   
+Finished building target: PiPar
+ 
+10:30:40 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+make: Nothing to be done for `all'.
+10:30:40 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+10:30:40 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+10:31:18 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+Building file: ../src/PiPar.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/mpich2/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiPar.d" -MT"src/PiPar.d" -o "src/PiPar.o" "../src/PiPar.c"
+Finished building: ../src/PiPar.c
+ 
+Building target: PiPar
+Invoking: GCC C Linker
+mpicc -Lusr/lib/mpich2/lib -o "PiPar"  ./src/PiPar.o   
+Finished building target: PiPar
+ 
+10:31:18 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+make: Nothing to be done for `all'.
+10:31:18 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+10:31:19 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+19:06:29 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+Building file: ../src/PiPar.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/mpich2/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiPar.d" -MT"src/PiPar.d" -o "src/PiPar.o" "../src/PiPar.c"
+Finished building: ../src/PiPar.c
+ 
+Building target: PiPar
+Invoking: GCC C Linker
+mpicc -Lusr/lib/mpich2/lib -o "PiPar"  ./src/PiPar.o   
+Finished building target: PiPar
+ 
+19:06:30 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+make: Nothing to be done for `all'.
+19:06:30 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+19:06:30 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+19:07:14 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+Building file: ../src/PiPar.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/mpich2/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiPar.d" -MT"src/PiPar.d" -o "src/PiPar.o" "../src/PiPar.c"
+Finished building: ../src/PiPar.c
+ 
+Building target: PiPar
+Invoking: GCC C Linker
+mpicc -Lusr/lib/mpich2/lib -o "PiPar"  ./src/PiPar.o   
+Finished building target: PiPar
+ 
+19:07:15 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+make: Nothing to be done for `all'.
+19:07:15 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+19:07:15 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+19:08:51 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+Building file: ../src/PiPar.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/mpich2/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiPar.d" -MT"src/PiPar.d" -o "src/PiPar.o" "../src/PiPar.c"
+Finished building: ../src/PiPar.c
+ 
+Building target: PiPar
+Invoking: GCC C Linker
+mpicc -Lusr/lib/mpich2/lib -o "PiPar"  ./src/PiPar.o   
+Finished building target: PiPar
+ 
+19:08:51 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+make: Nothing to be done for `all'.
+19:08:51 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+19:08:52 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+19:16:11 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+make: Nothing to be done for `all'.
+19:16:11 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+Building file: ../src/PiSeq.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiSeq.d" -MT"src/PiSeq.d" -o "src/PiSeq.o" "../src/PiSeq.c"
+Finished building: ../src/PiSeq.c
+ 
+Building target: PiSeq
+Invoking: GCC C Linker
+gcc  -o "PiSeq"  ./src/PiSeq.o   
+Finished building target: PiSeq
+ 
+19:16:11 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+19:16:11 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+19:39:44 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+make: Nothing to be done for `all'.
+19:39:45 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+Building file: ../src/PiSeq.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiSeq.d" -MT"src/PiSeq.d" -o "src/PiSeq.o" "../src/PiSeq.c"
+Finished building: ../src/PiSeq.c
+ 
+Building target: PiSeq
+Invoking: GCC C Linker
+gcc  -o "PiSeq"  ./src/PiSeq.o   
+Finished building target: PiSeq
+ 
+19:39:45 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+19:39:45 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
+19:46:50 **** Incremental Build of configuration Debug for project PiPar ****
+make all 
+Building file: ../src/PiPar.c
+Invoking: GCC C Compiler
+mpicc -I/usr/lib/mpich2/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PiPar.d" -MT"src/PiPar.d" -o "src/PiPar.o" "../src/PiPar.c"
+Finished building: ../src/PiPar.c
+ 
+Building target: PiPar
+Invoking: GCC C Linker
+mpicc -Lusr/lib/mpich2/lib -o "PiPar"  ./src/PiPar.o   
+Finished building target: PiPar
+ 
+19:46:51 **** Incremental Build of configuration Debug for project PiSeq ****
+make all 
+make: Nothing to be done for `all'.
+19:46:51 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+19:46:51 **** Incremental Build of configuration Debug for project matrix ****
+make all 
+make: Nothing to be done for `all'.
